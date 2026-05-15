@@ -4,43 +4,264 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy — Daily Driver</title>
+    <meta name="description" content="Daily Driver's privacy policy. No accounts, no servers, no tracking — your data stays in your iCloud.">
+    <meta name="theme-color" content="#0B1418">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        :root{--midnight:#0E1A20;--surface:#1E3540;--accent:#4A90A4;--text:#FFF;--text-secondary:#D0E0E8;--text-muted:#8BA5B0}*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Inter',-apple-system,sans-serif;background:var(--midnight);color:var(--text);line-height:1.7;-webkit-font-smoothing:antialiased}nav{position:fixed;top:0;width:100%;padding:16px 24px;background:rgba(14,26,32,0.92);backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,0.06);z-index:100;display:flex;justify-content:space-between;align-items:center}.nav-brand{font-size:20px;font-weight:700;color:var(--text);text-decoration:none}.nav-links{display:flex;gap:24px}.nav-links a{color:var(--text-secondary);text-decoration:none;font-size:14px;font-weight:500}.nav-links a:hover{color:var(--text)}.content{max-width:680px;margin:0 auto;padding:120px 24px 80px}h1{font-size:36px;font-weight:700;margin-bottom:8px}.last-updated{color:var(--text-muted);font-size:14px;margin-bottom:48px}h2{font-size:20px;font-weight:600;margin-top:40px;margin-bottom:12px}p{color:var(--text-secondary);margin-bottom:16px}ul{color:var(--text-secondary);margin-bottom:16px;padding-left:24px}li{margin-bottom:8px}a{color:var(--accent)}footer{border-top:1px solid rgba(255,255,255,0.06);padding:40px 24px;max-width:680px;margin:0 auto;text-align:center;color:var(--text-muted);font-size:14px}
+        :root {
+            --bg:            #0B1418;
+            --bg-elev:       #11202A;
+            --surface:       #16303C;
+            --border:        rgba(91, 167, 187, 0.14);
+            --border-strong: rgba(91, 167, 187, 0.28);
+            --accent:        #5BA7BB;
+            --accent-dim:    rgba(91, 167, 187, 0.16);
+            --text:          #FFFFFF;
+            --text-2:        #C6D5DC;
+            --text-3:        #8499A4;
+            --text-muted:    #5F727B;
+            --radius:        18px;
+            --ease:          cubic-bezier(.2,.7,.2,1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: -200px; left: 50%; transform: translateX(-50%);
+            width: 900px; height: 600px;
+            background: radial-gradient(ellipse at center, rgba(91, 167, 187, 0.08), transparent 65%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            flex-direction: column;
+            gap: 6px;
+            font-size: 11.5px;
+            font-weight: 700;
+            letter-spacing: 1.6px;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 16px;
+        }
+        .eyebrow::after {
+            content: '';
+            width: 36px;
+            height: 2px;
+            background: var(--accent);
+            border-radius: 2px;
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            backdrop-filter: blur(24px) saturate(180%);
+            -webkit-backdrop-filter: blur(24px) saturate(180%);
+            background: rgba(11, 20, 24, 0.72);
+            border-bottom: 1px solid var(--border);
+            z-index: 100;
+        }
+        .nav-inner {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 14px 28px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .nav-brand {
+            display: flex; align-items: center; gap: 10px;
+            font-size: 17px; font-weight: 700; color: var(--text);
+            text-decoration: none; letter-spacing: -0.01em;
+        }
+        .nav-brand-mark {
+            width: 28px; height: 28px;
+            border-radius: 7px;
+            background: linear-gradient(135deg, var(--accent), var(--accent-dim));
+            display: grid; place-items: center;
+            color: var(--bg); font-weight: 800; font-size: 13px;
+            box-shadow: 0 4px 12px rgba(91, 167, 187, 0.25);
+        }
+        .nav-links { display: flex; gap: 24px; align-items: center; }
+        .nav-links a {
+            color: var(--text-2); text-decoration: none;
+            font-size: 14px; font-weight: 500;
+            transition: color .18s var(--ease);
+        }
+        .nav-links a:hover { color: var(--text); }
+
+        .article {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 64px 28px 60px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .article h1 {
+            font-size: clamp(32px, 4vw, 44px);
+            font-weight: 800;
+            line-height: 1.08;
+            letter-spacing: -0.025em;
+            margin-bottom: 12px;
+        }
+        .updated {
+            color: var(--text-3);
+            font-size: 13.5px;
+            letter-spacing: 0.02em;
+        }
+
+        .lede {
+            font-size: 17.5px;
+            color: var(--text-2);
+            margin: 36px 0 8px;
+            padding: 22px 24px;
+            border-left: 2px solid var(--accent);
+            background: var(--bg-elev);
+            border-radius: 0 var(--radius) var(--radius) 0;
+        }
+
+        .article h2 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-top: 44px;
+            margin-bottom: 10px;
+            letter-spacing: -0.01em;
+        }
+        .article p {
+            color: var(--text-2);
+            font-size: 16px;
+            margin-bottom: 14px;
+        }
+        .article ul {
+            color: var(--text-2);
+            padding-left: 0;
+            list-style: none;
+            margin-bottom: 16px;
+        }
+        .article li {
+            padding: 12px 16px;
+            margin-bottom: 8px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            font-size: 15.5px;
+        }
+        .article li strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+        .article a {
+            color: var(--accent);
+            text-decoration: none;
+            border-bottom: 1px solid rgba(91, 167, 187, 0.3);
+            transition: border-color .18s var(--ease);
+        }
+        .article a:hover { border-bottom-color: var(--accent); }
+
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 32px 28px 40px;
+        }
+        .footer-inner {
+            max-width: 760px; margin: 0 auto;
+            display: flex; justify-content: space-between;
+            align-items: center; flex-wrap: wrap; gap: 16px;
+            font-size: 13.5px; color: var(--text-3);
+        }
+        .footer-inner a {
+            color: var(--text-3); text-decoration: none;
+            margin-left: 24px;
+            transition: color .18s var(--ease);
+        }
+        .footer-inner a:hover { color: var(--text); }
+
+        @media (max-width: 600px) {
+            .nav-links a:first-child { display: none; }
+            .article { padding: 40px 24px 40px; }
+        }
     </style>
 </head>
 <body>
-<nav><a href="/" class="nav-brand">Daily Driver</a><div class="nav-links"><a href="/">Home</a><a href="/support.html">Support</a></div></nav>
-<div class="content">
-    <h1>Privacy Policy</h1>
-    <p class="last-updated">Last updated: March 8, 2026</p>
-    <p>Daily Driver is built with privacy as a core principle. Your data belongs to you, and we've designed the app to keep it that way.</p>
-    <h2>What data we collect</h2>
-    <p>We don't collect any personal data. Daily Driver does not have a server, does not require an account, and does not track you in any way.</p>
-    <h2>Where your data is stored</h2>
-    <p>All your data (tasks, notes, projects, focus sessions, and journal entries) is stored in two places:</p>
+
+<nav>
+    <div class="nav-inner">
+        <a href="/" class="nav-brand">
+            <span class="nav-brand-mark">DD</span>
+            Daily Driver
+        </a>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/support.html">Support</a>
+        </div>
+    </div>
+</nav>
+
+<article class="article">
+    <span class="eyebrow">Privacy</span>
+    <h1>Your data stays with you.</h1>
+    <div class="updated">Last updated: March 8, 2026</div>
+
+    <p class="lede">Daily Driver was built with one privacy decision baked in from day one: no servers. There's no backend for us to lose, leak, or look at. Your tasks live on your device and in your private iCloud — and nowhere else.</p>
+
+    <h2>What we collect</h2>
+    <p>Nothing. Daily Driver has no server, no account system, and no analytics. We literally have no way to see what you're doing in the app.</p>
+
+    <h2>Where your data lives</h2>
     <ul>
-        <li><strong>On your device</strong> — in the app's local storage</li>
-        <li><strong>In your private iCloud container</strong> — if you're signed into iCloud, your data syncs across your devices using Apple's CloudKit. This data is stored in your personal iCloud account and is not accessible to us or anyone else.</li>
+        <li><strong>On your device.</strong> Tasks, notes, projects, focus sessions and journal entries are stored locally first.</li>
+        <li><strong>In your private iCloud container.</strong> If you're signed into iCloud, the same data syncs to your iPhone and iPad through Apple's CloudKit. It sits inside your personal iCloud account — not ours.</li>
     </ul>
+
     <h2>Calendar access</h2>
-    <p>Daily Driver can access your calendar (with your permission) to display today's events alongside your tasks. Calendar data is read locally on your device and is never sent anywhere.</p>
+    <p>If you grant calendar permission, Daily Driver reads your events on-device so it can show them alongside today's tasks. Calendar data never leaves your phone.</p>
+
     <h2>Microphone &amp; speech recognition</h2>
-    <p>Daily Driver offers voice note capture (with your permission). Audio is processed on-device using Apple's Speech framework. Voice recordings and transcriptions are stored locally and in your private iCloud container. They are never sent to our servers (we don't have any).</p>
+    <p>Voice notes are optional. When you record one, audio is transcribed on-device using Apple's Speech framework. The recording and its transcription are stored locally and in your private iCloud container. Neither is uploaded to us — we don't have anywhere to upload them to.</p>
+
     <h2>Analytics &amp; tracking</h2>
-    <p>Daily Driver does not include any analytics SDKs, tracking pixels, or third-party services. We don't use Google Analytics, Firebase, or any similar tools. We have no way to see how you use the app.</p>
+    <p>None. No Firebase, no Google Analytics, no third-party SDKs. The app makes no network requests of its own beyond CloudKit sync.</p>
+
     <h2>Third-party services</h2>
-    <p>The only third-party service used is Apple's CloudKit for iCloud sync, which is governed by <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>.</p>
+    <p>The only external service involved is Apple's CloudKit, which is governed by <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>.</p>
+
     <h2>Notifications</h2>
-    <p>Daily Driver can send you local notifications for task reminders and planning nudges. These are scheduled entirely on your device and do not go through any external service.</p>
+    <p>Daily Driver schedules local notifications for task reminders and planning nudges. They're generated entirely on your device — no push servers in the loop.</p>
+
     <h2>Children's privacy</h2>
-    <p>Daily Driver does not knowingly collect any information from children under the age of 13.</p>
+    <p>Daily Driver is not directed at children under 13 and does not knowingly collect any data from them.</p>
+
     <h2>Changes to this policy</h2>
-    <p>If we ever change this privacy policy, we'll update this page and the "Last updated" date above.</p>
+    <p>If we ever change this policy, we'll update this page and the "Last updated" date above. Since we have no email list, this page is the only channel we have to share changes.</p>
+
     <h2>Contact</h2>
-    <p>If you have questions about this privacy policy, please reach out at <a href="mailto:support@getdailydriver.com">support@getdailydriver.com</a>.</p>
-</div>
-<footer>&copy; 2026 Daily Driver. All rights reserved.</footer>
+    <p>Questions, concerns, or just want to say hi? <a href="mailto:support@getdailydriver.com">support@getdailydriver.com</a>.</p>
+</article>
+
+<footer>
+    <div class="footer-inner">
+        <div>&copy; 2026 Daily Driver</div>
+        <div>
+            <a href="/">Home</a>
+            <a href="/support.html">Support</a>
+            <a href="mailto:support@getdailydriver.com">Email</a>
+        </div>
+    </div>
+</footer>
+
 </body>
 </html>
