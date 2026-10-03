@@ -5,24 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Support — Daily Driver</title>
     <meta name="description" content="Get help with Daily Driver. Bug reports, feature requests, and answers to common questions.">
-    <meta name="theme-color" content="#0B1418">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <meta name="theme-color" content="#F3F7F9">
     <style>
         :root {
-            --bg:            #0B1418;
-            --bg-elev:       #11202A;
-            --surface:       #16303C;
+            --bg:            #F3F7F9;
+            --bg-elev:       #FFFFFF;
+            --surface:       #FFFFFF;
             --surface-2:     #1E3D4A;
-            --border:        rgba(91, 167, 187, 0.14);
-            --border-strong: rgba(91, 167, 187, 0.28);
-            --accent:        #5BA7BB;
-            --accent-dim:    rgba(91, 167, 187, 0.16);
-            --text:          #FFFFFF;
-            --text-2:        #C6D5DC;
-            --text-3:        #8499A4;
-            --text-muted:    #5F727B;
+            --border:        #DCE6EA;
+            --border-strong: #C5D5DB;
+            --accent:        #3A7F92;
+            --accent-dim:    #E3F0F3;
+            --text:          #1A202C;
+            --text-2:        #4A5568;
+            --text-3:        #5F6B7A;
+            --text-muted:    #5F6B7A;
             --radius:        18px;
             --ease:          cubic-bezier(.2,.7,.2,1);
         }
@@ -30,7 +27,7 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         html { scroll-behavior: smooth; }
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
             background: var(--bg);
             color: var(--text);
             line-height: 1.6;
@@ -43,7 +40,7 @@
             position: fixed;
             top: -200px; left: 50%; transform: translateX(-50%);
             width: 900px; height: 600px;
-            background: radial-gradient(ellipse at center, rgba(91, 167, 187, 0.08), transparent 65%);
+            background: radial-gradient(ellipse at center, rgba(58, 127, 146, 0.06), transparent 65%);
             pointer-events: none;
             z-index: 0;
         }
@@ -72,7 +69,7 @@
             top: 0;
             backdrop-filter: blur(24px) saturate(180%);
             -webkit-backdrop-filter: blur(24px) saturate(180%);
-            background: rgba(11, 20, 24, 0.72);
+            background: rgba(243, 247, 249, 0.82);
             border-bottom: 1px solid var(--border);
             z-index: 100;
         }
@@ -92,9 +89,9 @@
         .nav-brand-mark {
             width: 28px; height: 28px;
             border-radius: 7px;
-            background: linear-gradient(135deg, var(--accent), var(--accent-dim));
+            background: var(--accent);
             display: grid; place-items: center;
-            color: var(--bg); font-weight: 800; font-size: 13px;
+            color: #fff; font-weight: 800; font-size: 13px;
             box-shadow: 0 4px 12px rgba(91, 167, 187, 0.25);
         }
         .nav-links { display: flex; gap: 24px; align-items: center; }
@@ -345,7 +342,7 @@
                 What does Daily Driver cost?
                 <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
             </summary>
-            <div class="faq-body">The app is free — tasks, notes, projects, the focus timer, and iCloud sync are all included. Daily Driver AI (AI day &amp; week planning and weekly reflections) is an optional subscription: 7 days free, then US$0.99/month, billed through your Apple Account. Prices vary slightly by region.</div>
+            <div class="faq-body">The app is free — tasks, notes, projects, the focus timer, and iCloud sync are all included. Daily Driver AI (AI day &amp; week planning and weekly reflections) is free for your first 14 days. After that it's an optional subscription at US$0.99/month, billed through your Apple Account. Prices vary slightly by region.</div>
         </details>
 
         <details class="faq-item">
